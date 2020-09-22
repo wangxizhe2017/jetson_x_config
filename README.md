@@ -14,6 +14,11 @@
 
 ## 3. SSD NVMe Installation
 ### 1) See https://www.youtube.com/watch?v=x0TBTYw7HKs
-### 2) Transfer OS to the hard drive
+### 2) Transfer OS to the hard drive, on Jetson Xavier:
 #### i.   In /etc/systemd/system/, create setssdroot.service
+#### ii.  In /sbin/, create setssdroot.sh
+#### iii. In /etc/, create setssdroot.conf, no content in the file
+#### iv,  open terminal, 
+####      sudo mount /dev/nvme0n1p1 /mnt
+####      sudo rsync -aAXv / --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found"} /mnt
 
