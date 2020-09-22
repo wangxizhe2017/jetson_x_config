@@ -1,1 +1,3 @@
-# jetson_x_config
+# Jetson Xavier Initialization and Configuration
+
+##
