@@ -20,5 +20,6 @@
 #### iii. In /etc/, create setssdroot.conf, no content in the file
 #### iv,  open terminal, 
 ```sudo mount /dev/nvme0n1p1 /mnt```
+
 ```sudo rsync -aAXv / --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found"} /mnt``` (in one line)
 #### v.   Check if /etc/systemd/system/setssdroot.service, /sbin/setssdroot.sh, /etc/setssdroot.conf exist and correct, in terminal
