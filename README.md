@@ -17,7 +17,7 @@
 ### 2) Transfer OS to the hard drive, on Jetson Xavier:
 #### i.   In /etc/systemd/system/, create setssdroot.service
 #### ii.  In /sbin/, create setssdroot.sh
-#### iii. In /etc/, create setssdroot.conf, no content in the file
+#### iii. In /etc/, create setssdroot.conf, leave it empty
 #### iv,  open terminal, 
 ```sudo mount /dev/nvme0n1p1 /mnt```
 
