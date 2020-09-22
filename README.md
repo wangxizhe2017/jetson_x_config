@@ -7,6 +7,13 @@
 
 ## 2. OS Installation on Jetson Xavier
 ### 1) Download SDKManager on your computer: https://developer.nvidia.com/embedded/downloads#?search=Jetson%20AGX%20Xavier, and follow its instructions.
-### 2)
-### 
-### 
+### 2) Use SDKManager to install OS for Jetson Xavier
+#### i.   Due to specification, wire Jetson Xavier and computer
+#### ii.  Open NVIDIA account, MUST join developer grogram
+#### iii. Use SDKManager, follow the instructions: https://docs.nvidia.com/sdk-manager/install-with-sdkm-jetson/index.html; in step 3, Target Components, only check Jetson OS, do Jetson SDK Components later
+
+## 3. SSD NVMe Installation
+### 1) See https://www.youtube.com/watch?v=x0TBTYw7HKs
+### 2) Transfer OS to the hard drive
+#### i.   In /etc/systemd/system/, create setssdroot.service
+
