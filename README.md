@@ -21,5 +21,23 @@
 #### iv,  open terminal, 
 ```sudo mount /dev/nvme0n1p1 /mnt```
 
-```sudo rsync -aAXv / --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found"} /mnt``` (in one line)
+```sudo rsync -aAXv / --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found"} /mnt```
 #### v.   Check if /etc/systemd/system/setssdroot.service, /sbin/setssdroot.sh, /etc/setssdroot.conf exist and correct, in terminal
+```sudo cp /etc/systemd/system/setssdroot.service /mnt/etc/systemd/system/setssdroot.service```
+
+```sudo cp /sbin/setssdroot.sh /mnt/sbin/setssdroot.sh```
+#### vi.  Check if /mnt/etc/systemd/system/setssdroot.service, /sbin/setssdroot.sh /mnt/sbin/setssdroot.sh exist and correct, in terminal
+```sudo cp setssdroot.service /etc/systemd/system```
+
+```sudo cp setssdroot.sh /sbin```
+
+```sudo chmod 777 /sbin/setssdroot.sh```
+
+```systemctl daemon-reload```
+
+```sudo systemctl enable setssdroot.service```
+#### vii. reboot
+
+### 3) Use SDKManager, in step 3, Target Components, uncheck Jetson OS, only check Jetson SDK Components.
+
+## 4. Other tools: https://github.com/yqlbu/jetson-packages-family
