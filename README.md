@@ -19,5 +19,5 @@
 #### ii.  In /sbin/, create setssdroot.sh
 #### iii. In /etc/, create setssdroot.conf, no content in the file
 #### iv,  open terminal, 
-#### sudo mount /dev/nvme0n1p1 /mnt
+#### ```bash $ sudo mount /dev/nvme0n1p1 /mnt```
 #### sudo rsync -aAXv / --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found"} /mnt
