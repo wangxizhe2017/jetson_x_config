@@ -1,0 +1,44 @@
+#######install cmake#######
+sudo apt-get install libssl-dev
+wget https://github.com/Kitware/CMake/releases/download/v3.18.1/cmake-3.18.1.tar.gz
+cd cmake-3.18.1
+cmake .
+make -j8
+sudo make install
+source ~/.bashrc
+
+
+#######install protobuf#######
+wget https://github.com/protocolbuffers/protobuf/releases/download/v3.12.4/protobuf-all-3.12.4.tar.gz
+cd protobuf-3.12.4
+./autogen.sh
+./configure
+make -j8
+make check
+sudo make install
+sudo ldconfig
+cd python
+python setup.py build
+python setup.py install
+
+#######install onnx-tensorrt#######
+sudo apt-get install swig 
+git clone -n https://github.com/onnx/onnx-tensorrt.git
+git checkout 1e591b936426b40beef20d7e7b7226e4d92d848e
+cd onnx-tensorrt/
+cd third_party
+git clone -n https://github.com/onnx/onnx.git
+cd onnx
+git checkout 553df22c67bee5f0fe6599cff60f1afc6748c635
+cd ../../
+mkdir build && cd build
+cmake .. -DTENSORRT_ROOT=/usr/src/tensorrt && make -j8
+sudo make install
+sudo ldconfig
+cd ..
+------follow the fix by: https://github.com/onnx/onnx-tensorrt/issues/350#issuecomment-640921887
+python3 setup.py build
+python3 setup.py install
+pip  install pytools mako
+
+
