@@ -40,4 +40,6 @@
 
 ### 3) Use SDKManager, in step 3, Target Components, uncheck Jetson OS, only check Jetson SDK Components.
 
-## 4. Other tools: https://github.com/yqlbu/jetson-packages-family
+## 4.Install: run commands in additional_install.txt
+
+## 5. Other tools: https://github.com/yqlbu/jetson-packages-family
