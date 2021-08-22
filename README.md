@@ -44,7 +44,3 @@
 
 ## 5. Other tools: https://github.com/yqlbu/jetson-packages-family
 
-
-## 6. Github Token:
-
-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
